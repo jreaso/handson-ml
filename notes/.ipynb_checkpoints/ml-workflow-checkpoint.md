@@ -32,6 +32,24 @@ Want to set aside roughly 20% of the data to evaluate generalization error. In t
     - Encode the categorical variable using a suitable encoder (e.g. ordinal encoder or a one-hot encoder)
     - For variables with a large number of categories, consider replacing the variable (e.g. replace country with GDP of country)
 
-5. **Feature Scaling**
+5. **Feature Scaling and Engineering**
 
-## 5. 
+    *Apply transformations to variables so they are on the same scale and of a desired distribution*
+
+## 5. Make a Transformer Pipeline
+
+Make a transformer which deals with all the data preparation.
+
+## 6. Select and Train a Model
+
+## 7. Fine Tune Model
+
+Fine tune using a randomized or grid search to discover the optimal hyper-parameters. If a hyper-parameter is chosen that is on the boundary of choices, extend the search area. Use cross validation to estimate generalization error.
+
+## 8. Evaluate Model
+
+Evaluate the generalization error on the test set and **do no go back and tweak model after**.
+
+## 9. Deploy Model
+
+This step involves launching, monitoring and maintaining the system.
