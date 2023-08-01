@@ -19,16 +19,16 @@ Want to set aside roughly 20% of the data to evaluate generalization error. In t
 
 ## 4. Prepare Data
 
-1. Clean Data
-2. Deal with missing values
+### Clean Data
+### Deal with missing values
     - Remove instances with missing values
     - Remove variables/attributes with missing data
     - **Imputation** - fill in the missing values
     
     *It is safest to apply an imputer to all numerical attributes in case some complete attributes get missing data once the system goes live.*
 
-3. Consider outliers
-4. Deal with **categorical variables**
+### Consider outliers
+### Deal with **categorical variables**
     - Encode the categorical variable using a suitable encoder (e.g. ordinal encoder or a one-hot encoder)
     - For variables with a large number of categories, consider replacing the variable (e.g. replace country with GDP of country)
 
