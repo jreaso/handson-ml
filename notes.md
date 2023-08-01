@@ -24,6 +24,7 @@ Want to set aside roughly 20% of the data to evaluate generalization error. In t
     - Remove instances with missing values
     - Remove variables/attributes with missing data
     - Imputation - fill in the missing values
+    
     *It is safest to apply imputer to all numerical attributes in case some complete attributes get missing data once the system goes live.*
 
 ### 5. 
