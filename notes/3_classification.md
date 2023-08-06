@@ -1,10 +1,13 @@
 # Classification
 
-Classifiers we've seen:
+Classifiers:
 - `SGDClassifier`
 - `RandomForestClassifier`
+- `LogisticRegression`
+- `GaussianNB`
+- `SVC`
 
-## Binary Classifier 
+## Binary Classifier
 
 ### Metrics
 
