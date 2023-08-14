@@ -4,6 +4,8 @@ Solutions from work through of Hands on Machine Learning (Third Edition) by Aué
 
 A lot of the notes I make here are directly taken from the book, and many of the notebooks are using code directly from the book.
 
+Please see the official [handson-ml3](https://github.com/ageron/handson-ml3) repo for the book where the original code and official exercise solutions are.
+
 ## Chapters Progress
 
  **Part I: The Fundamentals of Machine Learning**
