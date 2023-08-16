@@ -161,6 +161,20 @@ Logistic Regression can be regularized, Sci-Kit Learn adds an $\ell_2$ penalty b
 
 ### Softmax Regression
 
+Softmax regression is a _multinomial logistic regression_.
 
+How the softmax regression model works:
+1. Computes a score $s_\boldsymbol{k}(\boldsymbol{x})$ for each class $k$.
+2. Applies **softmax function** (normalized exponential) to the scores to compute a probability.
 
+The softmax scores, $s_k(\mathbf{x})=\left(\boldsymbol{\theta}^{(k)}\right)^{\top} \mathbf{x}$, have their own parameters. The parameter vectors are stored as rows in a parameter matrix $\Theta$.
 
+**Softmax Function:**
+$$\widehat{p}_k=\sigma(\mathbf{s}(\mathbf{x}))_k=\frac{\exp \left(s_k(\mathbf{x})\right)}{\sum_{j=1}^K \exp \left(s_j(\mathbf{x})\right)}$$
+
+_Note: softmax is multiclass, but not multioutput. It should be used on mutually exclusive classes._
+
+**Cross Entropy** is used as the cost function:
+$$J(\boldsymbol{\Theta})=-\frac{1}{m} \sum_{i=1}^m \sum_{k=1}^K y_k^{(i)} \log \left(\widehat{p}_k^{(i)}\right)$$
+
+Sci-Kit Learn's `LogisticRegression` automatically uses softmax on multiple classes when you use the (default) `solver="lbfgs"`.
