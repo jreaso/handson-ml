@@ -139,3 +139,28 @@ _Note: With stochastic and mini-batch gradient descent, the curves are not so sm
 
 
 ## Logistic Regression
+
+Logistic regression works similarly to linear regression but with a sigmoid applied to map the output space to $[0,1]$, estimating the probability of an outcome.
+$$\widehat{p}=h_{\boldsymbol{\theta}}(\mathbf{x})=\sigma\left(\boldsymbol{\theta}^{\top} \mathbf{x}\right)$$
+
+**Sigmoid Function:**$$\sigma(t)=\frac{1}{1+\exp (-t)}$$
+
+The sigmoid is the logistic function. The inverse of the logistic function is called the_logit_.
+
+**Cost Function** for a single instance:$$c(\boldsymbol{\theta})=\left\{\begin{array}{cc}
+-\log (\widehat{p}) & \text { if } y=1 \\
+-\log (1-\widehat{p}) & \text { if } y=0
+\end{array}\right.$$
+
+**Cost Function** for a whole training set:$$J(\boldsymbol{\theta})=-\frac{1}{m} \sum_{i=1}^m\left[y^{(i)} \log \left(\widehat{p}^{(i)}\right)+\left(1-y^{(i)}\right) \log \left(1-\widehat{p}^{(i)}\right)\right]$$
+
+
+There is no closed form expression to fin the parameters minimising this, but it is a convex function so GD can be used.
+
+Logistic Regression can be regularized, Sci-Kit Learn adds an $\ell_2$ penalty by default.
+
+### Softmax Regression
+
+
+
+
