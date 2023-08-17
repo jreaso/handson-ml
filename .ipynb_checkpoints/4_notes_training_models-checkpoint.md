@@ -1,5 +1,7 @@
 # Training Linear Models
 
+_Note: These notes are not condensed and not meant for revision. They are only meant to aid in learning the material._
+
 Learning algorithms will often optimize a different loss function during training than the performance measure used to evaluate the final model. This is due to being easier to optimize or for regularization reasons. We should aim to get the loss function to be as similar as possible to the performance metric.
 
 ## Linear Regression
