@@ -13,7 +13,7 @@ Please see the official [handson-ml3](https://github.com/ageron/handson-ml3) rep
 1. ~~The Machine Learning Landscape~~
 2. ~~End-To-End Machine Learning Project~~
 3. ~~Classification~~
-4. Training Models
+4. ~~Training Models~~
 5. Support Vector Machines
 6. Decision Trees
 7. Ensemble Learning And Random Forests
