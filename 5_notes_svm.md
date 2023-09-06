@@ -17,6 +17,8 @@ Similarity features use a similarity function, which measures how much each inst
 
 ## Gaussian RBF Kernel
 
+Increase regukarizationn by decreasing $\gamma$ and $C$.
+
 ## Support Vector Regression
 
 Intuition: fit a line which minimises the error beyond a certain distance $\epsilon$. The instances lying outside the $\epsilon$-insensitive region are called support vectors. $\epsilon$ is a hyperparameter.
