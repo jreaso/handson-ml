@@ -76,3 +76,18 @@ This splitting proceeds until the max depth or another stopping condition.
 - `min_samples_leaf` - Minimum number of samples a leaf node must have to be created.
 - `min_weight_fraction_leaf` - Same as `min_samples_leaf` but expressed as a fraction of the total number of weighted instances.
 
+# Regression
+
+```python
+tree_reg = DecisionTreeRegressor(max_depth=2)
+```
+
+CART training algorithm now tries to split tree to minimise MSE instead of impurity.
+
+$$
+J\left(k, t_k\right)=\frac{m_{\text {left }}}{m} \mathrm{MSE}_{\text {left }}+\frac{m_{\text {right }}}{m} \mathrm{MSE}_{\text {right }} \quad \text { where }\left\{\begin{array}{c}
+\mathrm{MSE}_{\text {node }}=\frac{\sum_{i \in \text { node }}\left(\hat{y}_{\text {node }}-y^{(i)}\right)^2}{m_{\text {node }}} \\
+\hat{y}_{\text {node }}=\frac{\sum_{i \in \text { node }} y^{(i)}}{m_{\text {node }}}
+\end{array}\right.
+$$
+
