@@ -65,7 +65,9 @@ This splitting proceeds until the max depth or another stopping condition.
 
 **CART algorithms are greedy, computing all possibilities is intractable for even small datasets.**
 
+#### Complexity
 
+The computational complexity of training a Decision Tree is $O(n \times m \log_2(m))$
 
 ## Regularization
 
@@ -90,4 +92,8 @@ J\left(k, t_k\right)=\frac{m_{\text {left }}}{m} \mathrm{MSE}_{\text {left }}+\f
 \hat{y}_{\text {node }}=\frac{\sum_{i \in \text { node }} y^{(i)}}{m_{\text {node }}}
 \end{array}\right.
 $$
+
+# PCA Helps Decsion Trees
+
+PCA scales and "rotates" the data so that decision trees often do better.
 
