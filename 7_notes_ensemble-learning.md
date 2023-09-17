@@ -71,3 +71,31 @@ With enough predictors, each training instance will be an OOB sample for several
 To use with SciKit Learn, set `oob_score=True` in `BaggingClassifier` and then access the `.oob_score_`.
 
 
+## Random Forests
+
+A random forests is an ensemble of decision trees generally trained with bagging.
+
+In SciKit Learn, use `RandomForestClassifier` (and `RandomForestRegressor`) instead of `BaggingClassifier`.
+
+By default, the random forest algorithm builds trees on a random subset of roughly $\sqrt{n}$ features.
+
+### Extra Trees
+
+You can add even more diversity by using random thresholds for each feature rather than the optimal threshold. This can be done using `splitter="random"`.
+
+A forest of such extremely random trees is called an extremely randomized trees⁠ (or extra-trees) ensemble. These are significantly faster to train.
+
+Can use `ExtraTreesClassifier` and `ExtraTreesRegressor`.
+
+### Feature Importance
+
+Random forests make it easy to measure the relative importance of each feature. Scikit-Learn measures a feature’s importance by looking at how much the tree nodes that use that feature reduce impurity on average, across all trees in the forest. This can then be scaled.
+
+Access this with `.feature_importances_`.
+
+
+## Boosting
+
+
+
+
