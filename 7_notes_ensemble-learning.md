@@ -96,6 +96,28 @@ Access this with `.feature_importances_`.
 
 ## Boosting
 
+Boosting combines weak learners into a string learner by training them sequentially, each new learner trying to correct it's predecessor.
+
+AdaBoost is the most popular.
+
+### AdaBoost
+
+Each new predictor pays more attention to the training instances which it's predecessor underfit.
+
+_Note: a drawback of sequential learning is that the training cannot be parallelized so does not scale as well._
+
+If the AdaBoost classifier is overfittng, you can reduce the number of estimators or try more strongly regularizing the base estimator.
+
+In SciKit Learn, AdaBoost is implemented with `AdaBoostClassifier` from `sklearn.ensemble`. Example:
+```python
+from sklearn.ensemble import AdaBoostClassifier
+
+ada_clf = AdaBoostClassifier(
+    DecisionTreeClassifier(max_depth=1), n_estimators=30,
+    learning_rate=0.5, random_state=42)
+ada_clf.fit(X_train, y_train)
+```
+
 
 
 
